@@ -1,0 +1,133 @@
+/* @red: #F73F52;
+@orange: #FF9000;
+@yellow: #FBD400;
+@green: #9ED763;
+@blue: #6730EC;
+@purple: #815A8F;
+@white: #FFFFFF;
+@rebeccapurple: #663399; */
+
+/* background-color: #48b6d4; */
+/* background-color: #ffd440; */
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOutSlide {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  25% {
+    opacity: 0.75;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+.frame {
+  background-color: #00cccc;
+  color: black;
+  max-width: 25vw;
+  min-width: 350px;
+  width: 350px;
+  min-height: 15vh;
+  border: 2px solid white;
+  border-radius: 20px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(-20px); /* Start position */
+  animation: fadeInSlide 1s ease-out forwards;
+  top: 8%;
+  left: 70%;
+  position: fixed;
+  z-index: 1000;
+}
+
+.hide {
+  animation: fadeOutSlide 0.5s ease-out;
+}
+
+.title {
+  margin: 2px;
+  padding: 8px 8px 2px 20px;
+  color: #f9f9f9;
+  text-align: left;
+  font-size: x-large;
+}
+
+.message {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 1px 2px 2px 2px;
+  padding: 8px 20px 8px 20px;
+  color: #f9f9f9;
+}
+
+.exit {
+  display: flex;
+  justify-content: end;
+}
+
+.exitbutton {
+  padding-right: 20px;
+  padding-top: 20px;
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.cancel {
+  position: relative;
+  padding-right: 6px;
+  padding-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cancel::before,
+.cancel::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 1.5px;
+  background-color: white;
+  border-radius: 1px;
+}
+
+.cancel::before {
+  transform: rotate(45deg);
+}
+
+.cancel::after {
+  transform: rotate(-45deg);
+}
