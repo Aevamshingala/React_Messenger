@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
-function App({
+function Messenger({
   title = "hello",
   message = "hi👋, I am from React Messenger",
   style = "",
@@ -34,4 +34,4 @@ function App({
   );
 }
 
-export default App;
+export default Messenger;
