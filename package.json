@@ -1,5 +1,5 @@
 {
-  "name": "react_messenger",
+  "name": "messenger_react",
   "version": "1.0.0",
   "description": "A React component package for messaging features",
   "main": "dist/index.js",
@@ -29,5 +29,9 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aevamshingala/Messenger_React"
+  }
 }
